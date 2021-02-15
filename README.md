@@ -1,2 +1,2 @@
 # Flutter.CodingTest
-Console application that parses csv data and aggeragtes it into reports
+Console application that parses csv data and aggregates it into reports
