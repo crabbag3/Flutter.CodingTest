@@ -14,15 +14,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Models", "1 - Models", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flutter.Utility", "Flutter.Utility\Flutter.Utility.csproj", "{C13DC979-BF6E-4D9A-9A33-39D1F5362F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flutter.Core", "Flutter.CodingTest.Core\Flutter.Core.csproj", "{204EF96C-9B08-4445-AED6-18CCBAB40997}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flutter.Core", "Flutter.CodingTest.Core\Flutter.Core.csproj", "{204EF96C-9B08-4445-AED6-18CCBAB40997}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Service Interfaces", "2 - Service Interfaces", "{2CC21FDC-4E30-47FC-A2ED-9F0A1DF06315}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Services", "3 - Services", "{FCC9AAC3-D36E-48BA-B919-96E8A19E6A3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flutter.Services", "Flutter.Services\Flutter.Services.csproj", "{0E1073DC-6D31-4DA6-BD77-0571337521A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flutter.Services", "Flutter.Services\Flutter.Services.csproj", "{0E1073DC-6D31-4DA6-BD77-0571337521A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flutter.Services.Interfaces", "Flutter.Services.Interfaces\Flutter.Services.Interfaces.csproj", "{CFD2BD31-3483-42AF-88EB-0B07D5C7B2EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flutter.Services.Interfaces", "Flutter.Services.Interfaces\Flutter.Services.Interfaces.csproj", "{CFD2BD31-3483-42AF-88EB-0B07D5C7B2EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flutter.CodingTest.Tests", "Flutter.CodingTest.Tests\Flutter.CodingTest.Tests.csproj", "{1E8D813C-6B57-4B20-86EF-C095A61CE684}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{CFD2BD31-3483-42AF-88EB-0B07D5C7B2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD2BD31-3483-42AF-88EB-0B07D5C7B2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFD2BD31-3483-42AF-88EB-0B07D5C7B2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E8D813C-6B57-4B20-86EF-C095A61CE684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8D813C-6B57-4B20-86EF-C095A61CE684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8D813C-6B57-4B20-86EF-C095A61CE684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8D813C-6B57-4B20-86EF-C095A61CE684}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

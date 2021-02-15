@@ -16,9 +16,7 @@ namespace Flutter.CodingTest
         private static async System.Threading.Tasks.Task Main(string[] args)
         {
             IServiceCollection services = new ServiceCollection();
-
             services.AddDataTransferServices();
-
             using var serviceProvider = services.BuildServiceProvider();
             var dataTransfer = serviceProvider.GetService<ReportGeneratorService>();
 
@@ -53,8 +51,7 @@ namespace Flutter.CodingTest
             }
 
             // Type of Report to be Generated
-
-            Console.WriteLine("\nHow would you like the data outputted?" +
+            Console.WriteLine("\nHow would you like the data outputed?" +
                 "\nPress 1 for it to be outputed to the console or 2 for it to written to a CSV file");
 
             string input = Console.ReadLine();
@@ -101,7 +98,7 @@ namespace Flutter.CodingTest
             else if (input.Equals("2"))
             {
                 ReportType reportType = TypeOfReport();
-                // confirm you want to overwrite
+                // TODO: Confirm you want to overwrite
                 string fileName = $"{reportType}bet_data_ouput.csv";
 
                 if (reportType == ReportType.Report1)
@@ -115,10 +112,10 @@ namespace Flutter.CodingTest
                     CsvParser.CreateCsv(report2.ToList(), fileName);
                 }
 
-                // CHANGE WHERE FILE IS OUTPUTTED
+ 
                 Console.WriteLine($"The file will be generated in {Directory.GetCurrentDirectory()}/{reportType}bet_data_output.csv");
             }
-            // error handling?
+
             else Console.WriteLine("You didn't select a valid option\nExiting...");
             Console.WriteLine("Press any key to exit");
             Console.ReadLine();
@@ -149,7 +146,7 @@ namespace Flutter.CodingTest
             }
             if (input == "2")
             {
-                reportType = ReportType.Report2; //make into method here??
+                reportType = ReportType.Report2; 
             }
             return reportType;
         }
