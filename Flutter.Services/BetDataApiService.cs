@@ -4,13 +4,14 @@ using Flutter.Core.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Flutter.CodingTest.Services
 {
-    public class BetDataApiService: IBetDataApiService
+    public class BetDataApiService : IBetDataApiService
     {
         private readonly HttpClient _httpClient;
 
@@ -25,17 +26,21 @@ namespace Flutter.CodingTest.Services
         /// <param name="url"></param>
         /// <returns></returns>
         public async Task<IEnumerable<BetData>> GetAsync(string url)
-        { 
-            
+        {
+            IEnumerable<BetData> betData = new List<BetData>();
+
             var request = new HttpRequestMessage(HttpMethod.Get, url);
+            var httpResponse = await _httpClient.SendAsync(request);
+            
+            if (httpResponse.StatusCode != HttpStatusCode.OK)
+            {
+                throw new HttpRequestException($"Http exception occured: {httpResponse.StatusCode}");
+            }
 
-            // Auth required?
-
-            var response = await _httpClient.SendAsync(request);
-
-            var resultString = await response.Content.ReadAsStringAsync();
-            return (IEnumerable<BetData>)JsonConvert.DeserializeObject<BetData>(resultString);
-
+           var response = await httpResponse.Content.ReadAsStringAsync();
+           betData = (IEnumerable<BetData>)JsonConvert.DeserializeObject<BetData>(response);
+           
+           return betData;
         }
     }
 }

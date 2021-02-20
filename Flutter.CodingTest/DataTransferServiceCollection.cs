@@ -14,8 +14,6 @@ namespace Flutter.CodingTest
         public static void AddDataTransferServices(this IServiceCollection services)
         {
             services.AddSingleton<HttpClient>();
-            services.AddSingleton<ReportGeneratorService>();
-            services.AddSingleton<BetDataApiService>();
             services.AddSingleton<IReportGeneratorService, ReportGeneratorService>();
             services.AddSingleton<IBetDataApiService, BetDataApiService>();
         }
